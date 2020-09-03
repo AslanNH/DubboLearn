@@ -24,6 +24,7 @@ public class ApiAsyncConsumer {
         //异步调用需要设置超时是时间，（默认超时时间1s）不然服务处理时间过长，消费者将断去链接，导致future.get()报错
         referenceConfig.setTimeout(5000);
 
+
         referenceConfig.setAsync(true);
 
         GreetingService greetingService = referenceConfig.get();
